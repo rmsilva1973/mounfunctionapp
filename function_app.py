@@ -5,7 +5,7 @@ import logging
 
 app = func.FunctionApp()
 
-@app.timer_trigger(schedule="0 */5 * * * *", arg_name="myTimer", run_on_startup=False,
+@app.timer_trigger(schedule="0 */30 * * * *", arg_name="myTimer", run_on_startup=False,
               use_monitor=False) 
 def export_shape(myTimer: func.TimerRequest) -> None:
     
